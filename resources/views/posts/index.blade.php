@@ -16,9 +16,9 @@
                                     <img src="/storage/{{ $post->image }}" alt="" class="w-full" class="lazy">
                                 </a>
                             </div>
-                            <div class="px-6 py-4">
+                            <div class="profile-class px-6 py-4">
                                 <div class="font-bold text-xl mb-2">{{ $post->title }}</div>
-                                <p class="text-gray-700 text-base">
+                                <p class="text-white-700 text-base">
                                 $ {{ $post->price }}
                                 </p>
                                 

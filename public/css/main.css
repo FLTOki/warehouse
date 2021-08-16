@@ -1,0 +1,21 @@
+body{
+    background-color: #243B53;
+}
+
+.card-header{
+    background-color: #243B53; 
+    color: #fff;
+}
+
+.card-body{
+    background-color: #627D98;
+}
+
+.profile-class{
+    background-color: #243B53; 
+    color: #fff;
+}
+
+.forgot-color{
+    color: #fff;
+}
