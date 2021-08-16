@@ -37,6 +37,9 @@ Route::post('/p', [App\Http\Controllers\PostsController::class, 'store']);
 Route::get('/p/{post}',[App\Http\Controllers\PostsController::class, 'show']);
 Route::get('/p/{post}/delete', [App\Http\Controllers\PostsController::class, 'destroy'])->name('post.destroy');
 
+//Checkout
+Route::get('/checkout/{post}', [App\Http\Controllers\CheckoutController::class, 'show']);
+
 //Email Controllers
 Route::get('/contact', [App\Http\Controllers\ContactController::class, 'create'])->name('emails.contact');
 Route::post('/contact', [App\Http\Controllers\ContactController::class, 'send'])->name('emails.send');

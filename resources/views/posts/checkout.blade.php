@@ -8,7 +8,7 @@
                 <div class="wrapper bg-gray-400 antialiased text-gray-900">
                     <div class="">
                         <div class="post">
-                            <img src="/storage/{{ $post->image }}" alt="" class="w-100" height="800px">
+                            <img src="/storage/{{ $post->image }}" alt="" >
                         </div>
 
                         <div class="relative px-4 -mt-16  ">
@@ -28,36 +28,19 @@
                                     $ {{ $post->price }}
                                     <span class="text-gray-600 text-sm"> </span>
                                     <br>
-                                    <div class="pt-3">
-                                        <a href="/checkout/{{$post->id}}">
-                                            <span class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"> Buy</span>
-                                        </a>
-                                        <span class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"> Bookmark</span>
-                                        @if(auth()->user()->isOwner() || auth()->user()->isAdmin())
-                                        <a href="/p/{{$post->id}}/delete" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">Delete</a>
-                                        @endif
-                                    </div>
                                 </div>
 
                                 <div class=" mt-4">
                                     <p class="text-teal-600 text-md font-semibold">Description </p>
                                     <p class="text-sm text-gray-600">{{ $post->description }}</p>
                                 </div>
-
-                                <div class=" mt-4">
-                                    <p class="text-teal-600 text-md font-semibold">Owner Info </p>
-                                    <p class="text-sm text-gray-600">Name:
-                                        <a href="/profile/{{$post->user->id }}">{{ $post->user->name }}</a>
-                                    </p>
-                                    <p class="text-sm text-gray-600">Office: {{ $post->user->profile->office }}</p>
-                                    <p class="text-sm text-gray-600">Email: {{ $post->user->email }}</p>
-                                    <div class="pt-3">
-                                        <span class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">CONTACT</span>
-                                    </div>
+                                <div class="pay-options d-flex pt-3">
+                                    <button class="btn btn-sm btn-success">Mpesa</button>
+                                    <span class="pr-3"></span>
+                                    <button class="btn btn-primary">Paypal</button>
                                 </div>
                             </div>
                         </div>
-
                     </div>
                 </div>
 
