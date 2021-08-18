@@ -39,6 +39,9 @@ Route::get('/p/{post}/delete', [App\Http\Controllers\PostsController::class, 'de
 
 //Checkout
 Route::get('/checkout/{post}', [App\Http\Controllers\CheckoutController::class, 'show']);
+Route::get('payment', [App\Http\Controllers\PayPalController::class, 'payment'])->name('payment');
+Route::get('cancel', [App\Http\Controllers\PayPalController::class, 'cancel'])->name('payment.cancel');
+Route::get('payment/success', [App\Http\Controllers\PayPalController::class, 'success'])->name('payment.success');
 
 //Email Controllers
 Route::get('/contact', [App\Http\Controllers\ContactController::class, 'create'])->name('emails.contact');

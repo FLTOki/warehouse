@@ -166,6 +166,8 @@ return [
          * Package Service Providers...
          */
         Chatify\ChatifyServiceProvider::class,
+        Gathuku\Mpesa\MpesaServiceProvider::class,
+        Srmklive\PayPal\Providers\PayPalServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -230,7 +232,23 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
         'Image' => Intervention\Image\Facades\Image::class,
         'Chatify' => Chatify\Facades\ChatifyMessenger::class,
+        'Mpesa' => Gathuku\Mpesa\Facades\Mpesa::class,
+        'PayPal' => Srmklive\PayPal\Facades\PayPal::class,
 
     ],
+
+    'debug_blacklist' => [
+        '_ENV' => [
+            'MPESA_CONSUMER_KEY',
+            'MPESA_CONSUMER_SECRET',
+            'MPESA_SHORTCODE',
+            'MPESA_STK_SHORTCODE',
+            'MPESA_ENV',
+            'MPESA_TEST_MSISDN',
+            'MPESA_PASSKEY',
+            'MPESA_B2C_PASSWORD',
+            'MPESA_TEST_URL',
+        ]
+    ]
 
 ];

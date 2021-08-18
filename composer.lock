@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d44e3df6c80fd007c5f67198e7ffc1b5",
+    "content-hash": "a8907896df75b6a89201e29ca1a8f406",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -556,6 +556,73 @@
                 }
             ],
             "time": "2021-04-26T11:24:25+00:00"
+        },
+        {
+            "name": "gathuku/laravelmpesa",
+            "version": "v1.2.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/gathuku/laravel_mpesa.git",
+                "reference": "cc61d3494e059544e36949a752deec026f25e311"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/gathuku/laravel_mpesa/zipball/cc61d3494e059544e36949a752deec026f25e311",
+                "reference": "cc61d3494e059544e36949a752deec026f25e311",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "^5.0|^6.0|^7.0|^8.0",
+                "php": "^7.1"
+            },
+            "require-dev": {
+                "orchestra/testbench": "^4.0",
+                "phpunit/phpunit": "^8.0"
+            },
+            "type": "laravel",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Gathuku\\Mpesa\\MpesaServiceProvider"
+                    ],
+                    "aliases": {
+                        "Mpesa": "Gathuku\\Mpesa\\Facades\\Mpesa"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Gathuku\\Mpesa\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "moses gathuku",
+                    "email": "mosesgathuku95@gmail.com"
+                }
+            ],
+            "description": "A simple mpesa package for laravel framework",
+            "homepage": "https://github/gathuku/laravel_mpesa",
+            "keywords": [
+                "gathuku",
+                "laravel",
+                "mpesa"
+            ],
+            "support": {
+                "issues": "https://github.com/gathuku/laravel_mpesa/issues",
+                "source": "https://github.com/gathuku/laravel_mpesa/tree/v1.2.1"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/gathuku",
+                    "type": "github"
+                }
+            ],
+            "time": "2020-12-22T13:09:54+00:00"
         },
         {
             "name": "graham-campbell/result-type",
@@ -2703,6 +2770,65 @@
                 }
             ],
             "time": "2020-08-18T17:17:46+00:00"
+        },
+        {
+            "name": "srmklive/paypal",
+            "version": "1.9.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/srmklive/laravel-paypal.git",
+                "reference": "779bc87eb4cd62982e4f2f57fb667fe47c78e259"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/srmklive/laravel-paypal/zipball/779bc87eb4cd62982e4f2f57fb667fe47c78e259",
+                "reference": "779bc87eb4cd62982e4f2f57fb667fe47c78e259",
+                "shasum": ""
+            },
+            "require": {
+                "guzzlehttp/guzzle": "~6.0|~7.0",
+                "illuminate/support": "~5.1|~5.2|~5.3|~5.4|~5.5|~5.6|~5.7|~5.8|~6.0|~7.0|~8.0",
+                "nesbot/carbon": "~1.0|~2.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Srmklive\\PayPal\\Providers\\PayPalServiceProvider"
+                    ],
+                    "aliases": {
+                        "PayPal": "Srmklive\\PayPal\\Facades\\PayPal"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Srmklive\\PayPal\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Raza Mehdi",
+                    "email": "srmk@outlook.com"
+                }
+            ],
+            "description": "Laravel plugin For Processing Payments Through Paypal Express Checkout. Can Be Used Independently With Other Applications.",
+            "keywords": [
+                "http",
+                "laravel paypal",
+                "paypal",
+                "rest",
+                "web service"
+            ],
+            "support": {
+                "issues": "https://github.com/srmklive/laravel-paypal/issues",
+                "source": "https://github.com/srmklive/laravel-paypal/tree/1.9.0"
+            },
+            "time": "2021-06-07T16:21:12+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",
