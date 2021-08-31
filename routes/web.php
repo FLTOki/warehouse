@@ -37,11 +37,10 @@ Route::post('/p', [App\Http\Controllers\PostsController::class, 'store']);
 Route::get('/p/{post}',[App\Http\Controllers\PostsController::class, 'show']);
 Route::get('/p/{post}/delete', [App\Http\Controllers\PostsController::class, 'destroy'])->name('post.destroy');
 
-//Checkout
+//Checkout and Payment
 Route::get('/checkout/{post}', [App\Http\Controllers\CheckoutController::class, 'show']);
-Route::get('payment', [App\Http\Controllers\PayPalController::class, 'payment'])->name('payment');
-Route::get('cancel', [App\Http\Controllers\PayPalController::class, 'cancel'])->name('payment.cancel');
-Route::get('payment/success', [App\Http\Controllers\PayPalController::class, 'success'])->name('payment.success');
+Route::post('/paypal', [App\Http\Controllers\PaymentController::class, 'payWithpaypal'])->name('paypal'); //processing payment
+Route::post('/status', [App\Http\Controllers\PaymentController::class, 'getPaymentStatus'])->name('status'); //payment status
 
 //Email Controllers
 Route::get('/contact', [App\Http\Controllers\ContactController::class, 'create'])->name('emails.contact');
