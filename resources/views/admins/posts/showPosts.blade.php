@@ -13,7 +13,7 @@
                     </div>
                     @endif
 
-                    @include('layouts.adminNavbar')
+                    @include('layouts.adminNavbar') 
 
                     <div class="mt-5">
                         <h2 class="text-xl fon-bold">Posts</h2>

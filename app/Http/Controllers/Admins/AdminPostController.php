@@ -11,7 +11,7 @@ class AdminPostController extends Controller
 {
     public function index(Post $post)
     {
-        $post = Post::where('id', 'user_id')->orderBy('title')->paginate(6);
+        $post = Post::where('id', 'post')->orderBy('title')->paginate(6);
 
         return view('admins.posts.showPosts', ['posts' => $post]);
     }
@@ -36,12 +36,6 @@ class AdminPostController extends Controller
         return redirect(route('admins.posts.showPosts'));
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function destroy(Post $post)
     {
         $post->delete( );
