@@ -37,7 +37,7 @@
                                 <div class="pay-options d-flex pt-3">
                                     <button class="btn btn-sm btn-success">Mpesa</button>
                                     <span class="pr-3"></span>
-                                    <div class="content">
+                                    <!-- <div class="content">
                                         <h1>Laravel 6 PayPal Integration Tutorial</h1>
 
                                         <table border="0" cellpadding="10" cellspacing="0" align="center">
@@ -51,7 +51,7 @@
 
                                         <a href="{{ route('payment') }}" class="btn btn-success">Pay $100 from Paypal</a>
 
-                                    </div>
+                                    </div> -->
                                     <!-- <button class="btn btn-primary">Paypal</button> -->
                                 </div>
                             </div>

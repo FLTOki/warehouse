@@ -3,7 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Models\Post;
+use App\Models\User;
+use App\Mail\DeletedPost;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 use Intervention\Image\Facades\Image;
 
 class PostsController extends Controller
@@ -64,8 +67,11 @@ class PostsController extends Controller
         return view('posts.show', compact('post'));
     }
 
-    public function destroy(Post $post)
+    public function destroy(Post $post, User $user)
     {
+        
+        $mail = Mail::send(new DeletedPost);
+        
         $post->delete( );
 
         return redirect('/profile/'.auth()->user()->id)->withSuccess('Image deleted successfully');
