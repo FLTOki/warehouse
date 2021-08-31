@@ -29,10 +29,14 @@
                                     <span class="text-gray-600 text-sm"> </span>
                                     <br>
                                     <div class="pt-3">
+                                        @if(!auth()->user()->isOwner() || auth()->user()->isAdmin())
                                         <a href="/checkout/{{$post->id}}">
                                             <span class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"> Buy</span>
                                         </a>
+
                                         <span class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"> Bookmark</span>
+                                        @endif
+
                                         @if(auth()->user()->isOwner() || auth()->user()->isAdmin())
                                         <a href="/p/{{$post->id}}/delete" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">Delete</a>
                                         @endif
@@ -44,6 +48,7 @@
                                     <p class="text-sm text-gray-600">{{ $post->description }}</p>
                                 </div>
 
+                                @if(!auth()->user()->isOwner() || auth()->user()->isAdmin())
                                 <div class=" mt-4">
                                     <p class="text-teal-600 text-md font-semibold">Owner Info </p>
                                     <p class="text-sm text-gray-600">Name:
@@ -51,10 +56,11 @@
                                     </p>
                                     <p class="text-sm text-gray-600">Office: {{ $post->user->profile->office }}</p>
                                     <p class="text-sm text-gray-600">Email: {{ $post->user->email }}</p>
-                                    <div class="pt-3">                                      
+                                    <div class="pt-3">
                                         <a href="{{ route('chatify') }}" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">CONTACT</a>
                                     </div>
                                 </div>
+                                @endif
                             </div>
                         </div>
 
