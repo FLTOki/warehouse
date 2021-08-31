@@ -13,7 +13,7 @@ class PostsController extends Controller
         $this->middleware('auth');
     }
 
-    public function index()
+    public function index(Post $post)
     {
         # code...
         $users = auth()->user()->pluck('id');

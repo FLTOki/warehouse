@@ -12,6 +12,8 @@
 
                         <a href="{{ route('admins.users.showUsers') }}" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Users</a>
 
+                        <a href="{{ route('admins.posts.showPosts') }}" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Posts</a>
+
                         <a href="{{ route('admins.owners.showOwners') }}" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Owners</a>
 
                         <a href="{{ route('admins.showRoles') }}" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Roles</a>

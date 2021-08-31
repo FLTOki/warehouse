@@ -72,6 +72,15 @@ Route::middleware('auth','admin', 'verified')->prefix('admin')->group(function()
 
 });
 
+//Admin Post Controllers
+Route::middleware('auth','admin', 'verified')->prefix('admin')->group(function(){
+    Route::get('/posts', [\App\Http\Controllers\Admins\AdminPostController::class, 'index'])->name('admins.posts.showPosts');
+    Route::get('/posts/{post}/show', [AdminPostController::class, 'show'])->name('admins.posts.editPosts');
+    Route::get('/posts/{post}', [App\Http\Controllers\Admins\AdminPostController::class, 'destroy'])->name('admins.posts.destroy');
+    Route::patch('/posts/{post}/update',[App\Http\Controllers\Admins\AdminPostController::class, 'update'])->name('admins.posts.update');
+
+});
+
 //Admin Owner Controllers
 Route::middleware('auth','admin', 'verified')->prefix('admin')->group(function(){
     Route::get('/owners', [\App\Http\Controllers\Admins\OwnersController::class, 'index'])->name('admins.owners.showOwners');

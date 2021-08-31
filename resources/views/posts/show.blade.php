@@ -51,8 +51,8 @@
                                     </p>
                                     <p class="text-sm text-gray-600">Office: {{ $post->user->profile->office }}</p>
                                     <p class="text-sm text-gray-600">Email: {{ $post->user->email }}</p>
-                                    <div class="pt-3">
-                                        <span class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">CONTACT</span>
+                                    <div class="pt-3">                                      
+                                        <a href="{{ route('chatify') }}" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">CONTACT</a>
                                     </div>
                                 </div>
                             </div>

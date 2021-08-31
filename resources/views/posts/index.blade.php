@@ -8,7 +8,7 @@
             <div class="p-6 bg-white border-b border-gray-200">
 
                 <div class="grid grid-cols-3 gap-4">
-                    @foreach( Auth::user()->posts as $post)
+                    @foreach($posts as $post)
                     <div class="p-10">
                         <div class="max-w-md rounded overflow-hidden shadow-lg">
                             <div class="image">
