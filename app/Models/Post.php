@@ -6,10 +6,12 @@ use App\Mail\DeletedPost;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Mail;
+use Laravel\Scout\Searchable;
 
 class Post extends Model
 {
     use HasFactory;
+    use Searchable;
 
     protected $guarded = [];
 
@@ -17,9 +19,4 @@ class Post extends Model
     {
         return $this->belongsTo(User::class);
     }
-
-    // public function mail(User $user)
-    // {
-    //     Mail::to($user['email'])->send(new DeletedPost());
-    // }
 }
