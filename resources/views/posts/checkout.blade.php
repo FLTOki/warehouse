@@ -24,9 +24,7 @@
                                                 <p class="text-teal-600 text-md font-semibold">Description </p>
                                                 <p class="text-sm text-gray-600">{{ $post->description }}</p>
                                             </div>
-                                            <div>
-                                                <div id="paypal-button-container"></div>
-                                            </div>
+                                            <div id="paypal-button-container"></div>
                                         </div>
                                         <figure>
                                             <div class="post">
@@ -44,6 +42,5 @@
     </div>
 </div>
 
+
 @endsection
-
-
