@@ -23,6 +23,7 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes();
 
+
 //Home Controllers
 Route::get('/', [App\Http\Controllers\PostsController::class, 'index']);
 
