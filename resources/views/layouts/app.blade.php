@@ -13,6 +13,8 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
+    <script src="https://www.paypal.com/sdk/js?client-id=AYqCJP7-fpd069teA-o2uTrYNxsShjv25eKP7A3gY4Urny7amU1kVdysNIly911TGO4ObtMZ7vSmVM9T"></script>
+
 
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
