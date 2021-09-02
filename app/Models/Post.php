@@ -19,4 +19,11 @@ class Post extends Model
     {
         return $this->belongsTo(User::class);
     }
+
+    const SEARCHABLE_FIELDS = ['id', 'title', 'price'];
+
+    public function toSearchableArray()
+    {
+        return $this->only(self::SEARCHABLE_FIELDS);
+    }
 }

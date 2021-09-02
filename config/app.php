@@ -168,6 +168,8 @@ return [
         Chatify\ChatifyServiceProvider::class,
         Gathuku\Mpesa\MpesaServiceProvider::class,
         Srmklive\PayPal\Providers\PayPalServiceProvider::class,
+        TeamTNT\Scout\TNTSearchScoutServiceProvider::class,
+        Laravel\Scout\ScoutServiceProvider::class,
 
         /*
          * Application Service Providers...

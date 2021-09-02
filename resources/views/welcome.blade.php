@@ -437,13 +437,13 @@
         @if (Route::has('login'))
         <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
             @auth
-            <button class="btn btn-success"><a href="/profile/{{ Auth::user()->id }}" class="text-sm text-white-700 uppercase">My Profile</a></button>
+            <button class="btn btn-primary"><a href="/profile/{{ Auth::user()->id }}" class="text-sm text-white-700 uppercase">My Profile</a></button>
             <!--  url'/home'  -->
             @else
-            <button class="btn btn-success"><a href="{{ route('login') }}" class="text-sm text-white-700 uppercase">SIGN IN</a></button>
+            <button class="btn btn-primary"><a href="{{ route('login') }}" class="text-sm text-white-700 uppercase">SIGN IN</a></button>
 
             @if (Route::has('register'))
-            <button class="btn btn-success"><a href="{{ route('register') }}" class="ml-4 text-sm text-white-700 uppercase">SIGN UP</a></button>
+            <button class="btn btn-primary"><a href="{{ route('register') }}" class="ml-4 text-sm text-white-700 uppercase">SIGN UP</a></button>
             @endif
             @endauth
         </div>
@@ -465,7 +465,7 @@
                     <div class="HeroP">Sign Up for a new Account</div>
 
                     <div class="HeroBtnWrapper">
-                        <a href="/register" class="btn btn-success uppercase">
+                        <a href="/register" class="btn btn-primary uppercase">
                             Get Started
                         </a>
                     </div>
@@ -485,7 +485,7 @@
                                 <div class="Heading lightText={lightText}">Storage at your convenience </div>
                                 <div class="Subtitle darkText={darkText}"> Get the perfect storage space for your needs without any stress or hustle</div>
                                 <div class="BtnWrap">
-                                    <a href="/index" class="btn btn-success uppercase">
+                                    <a href="/index" class="btn btn-light uppercase">
                                         Get Started
                                     </a>
                                 </div>
@@ -504,17 +504,17 @@
                                 <div class="Heading ">Find Space anywhere you are </div>
                                 <div class="Subtitle "> Browse locations all over the country, narrow down to your location and select the perfect space for you</div>
                                 <div class="BtnWrap">
-                                    <a href="/index" class="btn btn-success uppercase">
+                                    <a href="/index" class="btn btn-primary uppercase">
                                         Browse
                                     </a>
                                 </div>
                             </div>
                         </div>
                         <div class="ImgWrap col-sm">
-                        <Img src="{{ asset('images/img2.svg') }}" class="pt-5" />
+                            <Img src="{{ asset('images/img2.svg') }}" class="pt-5" />
+                        </div>
                     </div>
-                    </div>
-                    
+
                 </div>
             </div>
 
@@ -531,7 +531,7 @@
                                 <div class="Heading">Create your account today</div>
                                 <div class="Subtitle "> Register and get unlimited access to our library of storage facilities, zero fees, zero hustle</div>
                                 <div class="BtnWrap">
-                                    <a href="/register" class="btn btn-success uppercase">
+                                    <a href="/register" class="btn btn-light uppercase">
                                         Register
                                     </a>
                                 </div>
@@ -542,22 +542,49 @@
                 </div>
             </div>
 
+            <!-- <div class="container">
+                <div class="ServicesH1">Our Services</div>
+                <div class="row">
+                    <div class="col-md">
+                        <div class="">
+                            <div class="ServicesIcon" src={Icon1} />
+                            <div class="ServicesH2">Premium Account</div>
+                            <div class="ServicesP">Want to lease your property through us? Get in touch with our team ASAP! www.storeawayhelp.com</div>
+                        </div>
+                    </div>
+                    <div class="col-md">
+                        <div class="">
+                            <div class="ServicesIcon" src={Icon1} />
+                            <div class="ServicesH2">Premium Account</div>
+                            <div class="ServicesP">Want to lease your property through us? Get in touch with our team ASAP! www.storeawayhelp.com</div>
+                        </div>
+                    </div>
+                    <div class="col-md">
+                        <div class="">
+                            <div class="ServicesIcon" src={Icon1} />
+                            <div class="ServicesH2">Premium Account</div>
+                            <div class="ServicesP">Want to lease your property through us? Get in touch with our team ASAP! www.storeawayhelp.com</div>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+
             <!-- <div class="ServicesContainer" id="services">
                 <div class="ServicesH1">Our Services</div>
                 <div class="ServicesWrapper row">
-                    <div class="ServicesCard col-sm-3">
+                    <div class="ServicesCard col-sm">
                         <div class="ServicesIcon" src={Icon1} />
                         <div class="ServicesH2">Premium Account</div>
                         <div class="ServicesP">Want to lease your property through us? Get in touch with our team ASAP! www.storeawayhelp.com</div>
                     </div>
 
-                    <div class="ServicesCard col-sm-3">
+                    <div class="ServicesCard col-sm">
                         <div class="ServicesIcon" src={Icon2} />
                         <div class="ServicesH2">Cashless Transactions</div>
                         <div class="ServicesP">Lease a warehouse from the comfort of your office through Paypal and MPesa</div>
                     </div>
 
-                    <div class="ServicesCard col-sm-3">
+                    <div class="ServicesCard col-sm">
                         <div class="ServicesIcon" src={Icon3} />
                         <div class="ServicesH2">After Sales Services</div>
                         <div class="ServicesP">Get in touch easily with the property owner or our team for any inquiries or concerns.</div>

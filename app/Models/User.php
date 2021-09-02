@@ -8,10 +8,13 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Support\Facades\Mail;
+use Laravel\Scout\Searchable;
 
 class User extends Authenticatable
 {
-    use HasFactory, Notifiable;
+    use HasFactory, Notifiable, Searchable;
+
+    const SEARCHABLE_FIELDS = ['id', 'name'];
 
     /**
      * The attributes that are mass assignable.
@@ -57,6 +60,11 @@ class User extends Authenticatable
             Mail::to($user->email)->send(new NewUserWelcomeMail());
 
         });
+    }
+
+    public function toSearchableArray()
+    {
+        return $this->only(self::SEARCHABLE_FIELDS);
     }
 
     public function isAdmin()
